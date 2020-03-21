@@ -45,8 +45,8 @@ def addregister(request):
     RePassword = request.POST['RePassword']
 
     User.object.create_user(
-        username= StudentID
-        first_name= FirstName
+        username= StudentID,
+        first_name= FirstName,
         last_name= LastName
         
     )
