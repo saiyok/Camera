@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <h2 align="center">คำร้องเรียนและคำแนะนำ</h2>
+    <h2 align="center">สมัครสมาชิก</h2>
     <form action="addregister" method="post"> <!--เมื่อใช้ post ข้อความจะไม่ขึ้นที่ url ถ้าใช้ get ข้อความจะขึ้นที่ url -->
         {% csrf_token %}  <!--ถ้าใช้ post ต้องใช้คำสั่งนี้ด้วย เพื่อเพิ่มความปลอดภัย  -->
         <div class="form-group">
@@ -21,8 +21,8 @@
         </div>
 
         <div class="form-group">
-            <lable for="">Phone Number</lable>
-            <input type="text" class="form-control" name="PhoneNumber">
+            <lable for="">Email</lable>
+            <input type="email" class="form-control" name="Email">
         </div>
 
         <div class="form-group">
