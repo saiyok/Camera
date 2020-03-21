@@ -40,17 +40,24 @@ def addregister(request):
     StudentID = request.POST['StudentID']
     FirstName = request.POST['FirstName']
     LastName = request.POST['LastName']
-    PhoneNumber = request.POST['PhoneNumber']
+    Email = request.POST['Email']
     Password = request.POST['Password']
     RePassword = request.POST['RePassword']
 
-    User.object.create_user(
+    user = User.objects.create_user(    #การนำข้อมูลไปเก็บในตาราง user
         username= StudentID,
         first_name= FirstName,
-        last_name= LastName
-        
-    )
+        last_name= LastName,
+        email = Email,
+        password = Password
+
+        )
+    
+    user.save()
     return render(request,'result.html')
+
+def loginForm(request):
+    return render(request,'login.html')
 
 
   
