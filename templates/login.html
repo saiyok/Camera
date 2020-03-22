@@ -3,7 +3,12 @@
 {% block content %}
 
     <h2 align="center">เข้าสู่ระบบ</h2>
-    <form action="addlogin" method="post"> <!--เมื่อใช้ post ข้อความจะไม่ขึ้นที่ url ถ้าใช้ get ข้อความจะขึ้นที่ url -->
+    {% for message in messages %}
+        <div class="alert alert-danger" role="alert">    <!--Alert (พื้นหลังแดง)-->
+            {{message}}
+        </div>
+    {% endfor %}
+    <form action="login" method="post"> <!--เมื่อใช้ post ข้อความจะไม่ขึ้นที่ url ถ้าใช้ get ข้อความจะขึ้นที่ url -->
         {% csrf_token %}  <!--ถ้าใช้ post ต้องใช้คำสั่งนี้ด้วย เพื่อเพิ่มความปลอดภัย  -->
         
         <div class="form-group">

@@ -26,6 +26,8 @@ urlpatterns = [
     path('Table',views.Table),
     path('register',views.register),
     path('addregister',views.addregister),
-    path('loginForm',views.loginForm)
+    path('loginForm',views.loginForm),
+    path('login',views.login),
+    path('logout',views.logout)
 
 ]
