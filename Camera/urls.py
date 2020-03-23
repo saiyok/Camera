@@ -28,6 +28,10 @@ urlpatterns = [
     path('addregister',views.addregister),
     path('loginForm',views.loginForm),
     path('login',views.login),
-    path('logout',views.logout)
+    path('logout',views.logout),
+    path('BorrowBack',views.BorrowBack),
+    path('RanNumBR',views.RanNumBR),
+    path('RanNumBack',views.RanNumBack)
+
 
 ]

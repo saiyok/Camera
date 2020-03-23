@@ -81,7 +81,7 @@ def login(request):
 
     if user is not None:
         auth.login(request,user)
-        return redirect('/Table')
+        return redirect('/BorrowBack')
 
     else:
         messages.info(request,'ข้อมูลไม่ถูกต้อง')
@@ -91,4 +91,12 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/loginForm')
-  
+
+def BorrowBack(request):
+    return render(request,'BorrowBack.html')
+
+def RanNumBR(request):
+    return render(request,'RanNumBR.html')
+
+def RanNumBack(request):
+    return render(request,'RanNumBack.html')
