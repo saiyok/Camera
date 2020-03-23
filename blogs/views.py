@@ -100,3 +100,6 @@ def RanNumBR(request):
 
 def RanNumBack(request):
     return render(request,'RanNumBack.html')
+ 
+def key_Num(request):
+    return render(request,'key_Num.html')

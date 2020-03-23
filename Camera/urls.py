@@ -31,7 +31,8 @@ urlpatterns = [
     path('logout',views.logout),
     path('BorrowBack',views.BorrowBack),
     path('RanNumBR',views.RanNumBR),
-    path('RanNumBack',views.RanNumBack)
+    path('RanNumBack',views.RanNumBack),
+    path('key_Num',views.key_Num)
 
 
 ]
